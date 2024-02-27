@@ -1,5 +1,5 @@
 
-package Ejercicio5;
+package ejercicio1;
 
 public class Factura {
     

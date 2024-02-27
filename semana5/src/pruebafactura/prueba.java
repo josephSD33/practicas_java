@@ -1,7 +1,7 @@
 
 package pruebafactura;
 
-import Ejercicio5.Factura;
+import ejercicio1.Factura;
 
 public class prueba {
     public static void main(String[] args) {
