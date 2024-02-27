@@ -9,7 +9,7 @@ public class Factura {
     private double precioPorArticulo;
     
     //constructor
-     public Factura(String pNumeroDePieza, String pDescripcionDePieza, int pCantidadDeArticulos, double pPrecioPorArticulo) {
+    public Factura(String pNumeroDePieza, String pDescripcionDePieza, int pCantidadDeArticulos, double pPrecioPorArticulo) {
         numeroDePieza = pNumeroDePieza;
         descripcionDePieza = pDescripcionDePieza;
         setCantidadDeArticulos(pCantidadDeArticulos);

@@ -6,7 +6,7 @@ import Ejercicio5.Factura;
 public class prueba {
     public static void main(String[] args) {
         
-    Factura factura = new Factura("001", "Teclado", 2, 15.5);
+    Factura factura = new Factura("0020", "lapiz", 2, 15.5);
 
        
     System.out.println("Numero de pieza: " + factura.getNumeroDePieza());
