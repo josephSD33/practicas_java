@@ -118,12 +118,29 @@ public class Automovil {
         Random rand = new Random();
         return rand.nextInt(4001) + 3000;
     }
+
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("Automovil{");
+        sb.append("marca=").append(marca);
+        sb.append(", costo=").append(costo);
+        sb.append(", placa=").append(placa);
+        sb.append(", color=").append(color);
+        sb.append(", fechaCompra=").append(fechaCompra);
+        sb.append(", duenio=").append(duenio);
+        sb.append(", telefonoDuenio=").append(telefonoDuenio);
+        sb.append(", isChocado=").append(isChocado);
+        sb.append('}');
+        return sb.toString();
+    }
+      
+    
       
     
         
       
     
-     //falta toString
+     
       
       
       
