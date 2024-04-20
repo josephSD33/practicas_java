@@ -7,6 +7,7 @@ package segundoadelanto;
 import java.awt.Color;
 import javax.swing.ButtonGroup;
 import javax.swing.JRadioButton;
+import proyecto.Principal;
 
 /**
  *
@@ -14,15 +15,27 @@ import javax.swing.JRadioButton;
  */
 public class segundo extends javax.swing.JFrame {
     
-    String [] preguntas= {"1+1","2+2","3+3","4+4","5+5","6+6","7+7"};
+    String [] preguntas= {"Que significan las siglas POO? ",
+        "2+2",
+        "3+3",
+        "4+4",
+        "5+5",
+        "6+6",
+        "7+7"};
     
     String[][] opciones={
-        {"2","4","80","15","2"},
+        {"Programación Orientada a Objetos","Procesamiento de Objetos Orientado","Patrones de Optimización de Operaciones","Principios de Optimización de Objetos","Programación Orientada a Objetos"},
+        
     {"5","1","4","10","4"},
+    
     {"7","6","5","9","6"},
+    
     {"9","10","11","8","8"},
+    
     {"15","10","14","9","10"},
+    
     {"12","10","6","21","12"},
+    
     {"76","14","7","21","14"}};
     
     
@@ -40,6 +53,7 @@ public class segundo extends javax.swing.JFrame {
    
     public segundo() {
         initComponents();
+        setLocationRelativeTo(null);
         
         bg.add(jRadioButtonR1);
         bg.add(jRadioButtonR2);
@@ -264,8 +278,15 @@ public class segundo extends javax.swing.JFrame {
             else{
                 Panel1.setBackground(Color.red);
             }
-            jButtonsiguient.setText("reiniciar");
+            if (jButtonsiguient.getText().equals("Salir")) {
             
+            Principal principalFrame = new Principal();
+            principalFrame.setVisible(true);
+            this.dispose(); 
+            return; 
+        }
+
+            jButtonsiguient.setText("Salir");
         }
         
         
