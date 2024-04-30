@@ -1,6 +1,7 @@
 
 package proyecto;
 
+import cuarto.fichas;
 import tercer.VentanaAhorcadoA;
 import javax.swing.JOptionPane;
 import segundoadelanto.InstruccionConceptos;
@@ -35,9 +36,11 @@ public class Principal extends javax.swing.JFrame {
         jPanelprincipal = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        Buttonpreguntas = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
+        jPanelpracticas = new javax.swing.JPanel();
         jButtonjuego = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
+        Buttonpreguntas = new javax.swing.JButton();
+        ButtonCrearficha = new javax.swing.JButton();
         jMenuBar2 = new javax.swing.JMenuBar();
         jMenu3 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
@@ -64,10 +67,12 @@ public class Principal extends javax.swing.JFrame {
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("Elija una opcion de practica");
 
-        Buttonpreguntas.setText("Quiz");
-        Buttonpreguntas.addActionListener(new java.awt.event.ActionListener() {
+        jPanelpracticas.setBackground(new java.awt.Color(102, 102, 102));
+
+        jButtonjuego.setText("juego");
+        jButtonjuego.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ButtonpreguntasActionPerformed(evt);
+                jButtonjuegoActionPerformed(evt);
             }
         });
 
@@ -78,35 +83,66 @@ public class Principal extends javax.swing.JFrame {
             }
         });
 
-        jButtonjuego.setText("juego");
-        jButtonjuego.addActionListener(new java.awt.event.ActionListener() {
+        Buttonpreguntas.setText("Quiz");
+        Buttonpreguntas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonjuegoActionPerformed(evt);
+                ButtonpreguntasActionPerformed(evt);
             }
         });
+
+        ButtonCrearficha.setText("Crear Fichas");
+        ButtonCrearficha.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ButtonCrearfichaActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanelpracticasLayout = new javax.swing.GroupLayout(jPanelpracticas);
+        jPanelpracticas.setLayout(jPanelpracticasLayout);
+        jPanelpracticasLayout.setHorizontalGroup(
+            jPanelpracticasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelpracticasLayout.createSequentialGroup()
+                .addGap(18, 18, 18)
+                .addGroup(jPanelpracticasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButtonjuego, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
+                .addGroup(jPanelpracticasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(ButtonCrearficha, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Buttonpreguntas, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(17, 17, 17))
+        );
+        jPanelpracticasLayout.setVerticalGroup(
+            jPanelpracticasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelpracticasLayout.createSequentialGroup()
+                .addGap(32, 32, 32)
+                .addGroup(jPanelpracticasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButtonjuego, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Buttonpreguntas, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(33, 33, 33)
+                .addGroup(jPanelpracticasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ButtonCrearficha, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(43, Short.MAX_VALUE))
+        );
 
         javax.swing.GroupLayout jPanelprincipalLayout = new javax.swing.GroupLayout(jPanelprincipal);
         jPanelprincipal.setLayout(jPanelprincipalLayout);
         jPanelprincipalLayout.setHorizontalGroup(
             jPanelprincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelprincipalLayout.createSequentialGroup()
-                .addGap(126, 126, 126)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelprincipalLayout.createSequentialGroup()
                 .addContainerGap(105, Short.MAX_VALUE)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(97, 97, 97))
+            .addGroup(jPanelprincipalLayout.createSequentialGroup()
                 .addGroup(jPanelprincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelprincipalLayout.createSequentialGroup()
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(97, 97, 97))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelprincipalLayout.createSequentialGroup()
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(131, 131, 131))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelprincipalLayout.createSequentialGroup()
-                        .addGroup(jPanelprincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(jButtonjuego, javax.swing.GroupLayout.DEFAULT_SIZE, 98, Short.MAX_VALUE)
-                            .addComponent(Buttonpreguntas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(131, 131, 131))))
+                    .addGroup(jPanelprincipalLayout.createSequentialGroup()
+                        .addGap(126, 126, 126)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanelprincipalLayout.createSequentialGroup()
+                        .addGap(51, 51, 51)
+                        .addComponent(jPanelpracticas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanelprincipalLayout.setVerticalGroup(
             jPanelprincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -115,13 +151,9 @@ public class Principal extends javax.swing.JFrame {
                 .addComponent(jLabel1)
                 .addGap(27, 27, 27)
                 .addComponent(jLabel2)
-                .addGap(28, 28, 28)
-                .addComponent(jButtonjuego)
                 .addGap(18, 18, 18)
-                .addComponent(Buttonpreguntas)
-                .addGap(18, 18, 18)
-                .addComponent(jButton1)
-                .addContainerGap(122, Short.MAX_VALUE))
+                .addComponent(jPanelpracticas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(83, Short.MAX_VALUE))
         );
 
         jMenu3.setText("Salir");
@@ -205,6 +237,12 @@ public class Principal extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_jButtonjuegoActionPerformed
 
+    private void ButtonCrearfichaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonCrearfichaActionPerformed
+        fichas fichas=new fichas();
+        fichas.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_ButtonCrearfichaActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -241,6 +279,7 @@ public class Principal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton ButtonCrearficha;
     private javax.swing.JButton Buttonpreguntas;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButtonjuego;
@@ -254,6 +293,7 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JMenuBar jMenuBar2;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
+    private javax.swing.JPanel jPanelpracticas;
     private javax.swing.JPanel jPanelprincipal;
     // End of variables declaration//GEN-END:variables
 }

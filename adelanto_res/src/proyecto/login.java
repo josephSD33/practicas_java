@@ -30,22 +30,36 @@ public class login extends javax.swing.JFrame {
     private void initComponents() {
 
         Panellogin = new javax.swing.JPanel();
+        jPanellog = new javax.swing.JPanel();
+        Labelnombre = new javax.swing.JLabel();
         TextFieldnom = new javax.swing.JTextField();
+        Labelcontra = new javax.swing.JLabel();
         PasswordFieldcontra = new javax.swing.JPasswordField();
         Buttonlogin = new javax.swing.JButton();
-        Labelcontra = new javax.swing.JLabel();
-        Labelnombre = new javax.swing.JLabel();
         Buttonotrousuario = new javax.swing.JButton();
+        Labelnombre1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         Panellogin.setBackground(new java.awt.Color(51, 51, 51));
+
+        jPanellog.setBackground(new java.awt.Color(102, 102, 102));
+
+        Labelnombre.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        Labelnombre.setForeground(new java.awt.Color(255, 255, 255));
+        Labelnombre.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Labelnombre.setText("Nombre de usuario");
 
         TextFieldnom.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 TextFieldnomActionPerformed(evt);
             }
         });
+
+        Labelcontra.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        Labelcontra.setForeground(new java.awt.Color(255, 255, 255));
+        Labelcontra.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Labelcontra.setText("Contraseña");
 
         PasswordFieldcontra.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -60,15 +74,43 @@ public class login extends javax.swing.JFrame {
             }
         });
 
-        Labelcontra.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        Labelcontra.setForeground(new java.awt.Color(255, 255, 255));
-        Labelcontra.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Labelcontra.setText("Contraseña");
-
-        Labelnombre.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        Labelnombre.setForeground(new java.awt.Color(255, 255, 255));
-        Labelnombre.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Labelnombre.setText("Nombre de usuario");
+        javax.swing.GroupLayout jPanellogLayout = new javax.swing.GroupLayout(jPanellog);
+        jPanellog.setLayout(jPanellogLayout);
+        jPanellogLayout.setHorizontalGroup(
+            jPanellogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanellogLayout.createSequentialGroup()
+                .addGroup(jPanellogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanellogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(Labelcontra, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(jPanellogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanellogLayout.createSequentialGroup()
+                                .addGap(29, 29, 29)
+                                .addComponent(Labelnombre, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanellogLayout.createSequentialGroup()
+                                .addGap(54, 54, 54)
+                                .addComponent(TextFieldnom, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(jPanellogLayout.createSequentialGroup()
+                        .addGap(54, 54, 54)
+                        .addGroup(jPanellogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(Buttonlogin, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(PasswordFieldcontra, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(34, Short.MAX_VALUE))
+        );
+        jPanellogLayout.setVerticalGroup(
+            jPanellogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanellogLayout.createSequentialGroup()
+                .addGap(18, 18, 18)
+                .addComponent(Labelnombre)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(TextFieldnom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(Labelcontra)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(PasswordFieldcontra, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(28, 28, 28)
+                .addComponent(Buttonlogin)
+                .addContainerGap(51, Short.MAX_VALUE))
+        );
 
         Buttonotrousuario.setText("Crear otro usuario");
         Buttonotrousuario.addActionListener(new java.awt.event.ActionListener() {
@@ -77,49 +119,39 @@ public class login extends javax.swing.JFrame {
             }
         });
 
+        Labelnombre1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        Labelnombre1.setForeground(new java.awt.Color(255, 255, 255));
+        Labelnombre1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Labelnombre1.setText("Bienvenido");
+
         javax.swing.GroupLayout PanelloginLayout = new javax.swing.GroupLayout(Panellogin);
         Panellogin.setLayout(PanelloginLayout);
         PanelloginLayout.setHorizontalGroup(
             PanelloginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PanelloginLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(Buttonotrousuario)
+                .addGap(14, 14, 14))
+            .addGroup(PanelloginLayout.createSequentialGroup()
                 .addGroup(PanelloginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(PanelloginLayout.createSequentialGroup()
-                        .addGap(128, 128, 128)
-                        .addGroup(PanelloginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(PasswordFieldcontra, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(TextFieldnom, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(74, 74, 74)
+                        .addComponent(jPanellog, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(PanelloginLayout.createSequentialGroup()
-                        .addGap(143, 143, 143)
-                        .addComponent(Buttonlogin)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelloginLayout.createSequentialGroup()
-                .addContainerGap(103, Short.MAX_VALUE)
-                .addGroup(PanelloginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelloginLayout.createSequentialGroup()
-                        .addGroup(PanelloginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(Labelnombre, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Labelcontra, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(102, 102, 102))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelloginLayout.createSequentialGroup()
-                        .addComponent(Buttonotrousuario)
-                        .addGap(37, 37, 37))))
+                        .addGap(104, 104, 104)
+                        .addComponent(Labelnombre1, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(77, Short.MAX_VALUE))
         );
         PanelloginLayout.setVerticalGroup(
             PanelloginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PanelloginLayout.createSequentialGroup()
-                .addGap(32, 32, 32)
-                .addComponent(Labelnombre)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(TextFieldnom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(44, 44, 44)
-                .addComponent(Labelcontra)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(PasswordFieldcontra, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(50, 50, 50)
-                .addComponent(Buttonlogin)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 40, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelloginLayout.createSequentialGroup()
+                .addContainerGap(11, Short.MAX_VALUE)
+                .addComponent(Labelnombre1)
+                .addGap(18, 18, 18)
+                .addComponent(jPanellog, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addComponent(Buttonotrousuario)
-                .addGap(29, 29, 29))
+                .addGap(14, 14, 14))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -127,16 +159,14 @@ public class login extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(71, 71, 71)
-                .addComponent(Panellogin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(71, Short.MAX_VALUE))
+                .addComponent(Panellogin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(33, 33, 33)
-                .addComponent(Panellogin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(53, Short.MAX_VALUE))
+                .addComponent(Panellogin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         pack();
@@ -152,35 +182,28 @@ public class login extends javax.swing.JFrame {
         String contrase= PasswordFieldcontra.getText();
 
 
-        for (Usuarios dato : iniciar.datos ) {
-            
+        
+    if (iniciar.datos.isEmpty()) {
+        JOptionPane.showMessageDialog(rootPane, "No hay usuarios registrados.");
+    } else {
+        boolean usuarioEncontrado = false;
+        for (Usuarios dato : iniciar.datos) {
             if (dato.getNombre().equals(usuario) && dato.getContra().equals(contrase)) {
-                
-                Principal p =new Principal();
+                Principal p = new Principal();
                 p.setVisible(true);
                 this.dispose();
-                
-                
-                
-            }else {
-                JOptionPane.showMessageDialog(rootPane,"Nombre de usuario o contrasena incorrecta");
-                TextFieldnom.setText("");
-                PasswordFieldcontra.setText("");
+                usuarioEncontrado = true;
+                break; 
             }
-
-
-
-
-
-
-        
-
-
-            
-  
-      
-            
         }
+        if (!usuarioEncontrado) {
+            JOptionPane.showMessageDialog(rootPane, "Nombre de usuario o contraseña incorrecta");
+            TextFieldnom.setText("");
+            PasswordFieldcontra.setText("");
+        }
+    }
+ 
+        
         
         
        
@@ -235,8 +258,10 @@ public class login extends javax.swing.JFrame {
     private javax.swing.JButton Buttonotrousuario;
     private javax.swing.JLabel Labelcontra;
     private javax.swing.JLabel Labelnombre;
+    private javax.swing.JLabel Labelnombre1;
     private javax.swing.JPanel Panellogin;
     private javax.swing.JPasswordField PasswordFieldcontra;
     private javax.swing.JTextField TextFieldnom;
+    private javax.swing.JPanel jPanellog;
     // End of variables declaration//GEN-END:variables
 }
