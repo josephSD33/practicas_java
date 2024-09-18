@@ -140,7 +140,7 @@ public class login extends javax.swing.JFrame {
                     .addGroup(PanelloginLayout.createSequentialGroup()
                         .addGap(104, 104, 104)
                         .addComponent(Labelnombre1, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(77, Short.MAX_VALUE))
+                .addContainerGap(73, Short.MAX_VALUE))
         );
         PanelloginLayout.setVerticalGroup(
             PanelloginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -185,6 +185,8 @@ public class login extends javax.swing.JFrame {
         
     if (iniciar.datos.isEmpty()) {
         JOptionPane.showMessageDialog(rootPane, "No hay usuarios registrados.");
+        TextFieldnom.setText("");
+            PasswordFieldcontra.setText("");
     } else {
         boolean usuarioEncontrado = false;
         for (Usuarios dato : iniciar.datos) {
@@ -216,6 +218,7 @@ public class login extends javax.swing.JFrame {
     private void ButtonotrousuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonotrousuarioActionPerformed
         registro reg =new registro();
                 reg.setVisible(true);
+                this.dispose();
     }//GEN-LAST:event_ButtonotrousuarioActionPerformed
 
     /**
